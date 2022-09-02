@@ -23,22 +23,23 @@ function calculateBalance() {
     const currentTotalExpenses = document.getElementById('total-expenses');
     const currentBalance = document.getElementById('balance');
 
+    //calculating total expenses and balance
+    const totalExpenses = food + rent + clothes;
+    const balance = income - totalExpenses;
 
-    if (income >= 0) {
-        if ((food >= 0 && food <= income) && (rent >= 0 && rent <= income) && (clothes >= 0 && clothes <= income)) {
-            const totalExpenses = (food + rent + clothes).toFixed(2);
-            const balance = (income - totalExpenses).toFixed(2);
+    if (income > 0) {
+        if ((food >= 0 && food <= income) && (rent >= 0 && rent <= income) && (clothes >= 0 && clothes <= income) && (totalExpenses <= income)) {
             currentTotalExpenses.innerText = totalExpenses;
             currentBalance.innerText = balance;
             return balance;
 
         }
         else {
-            alert("Food/Rent/Clothes can't be greater than income or be less than 0 and the field can't be empty!");
+            alert('Food/Rent/Clothes should not be empty and the value should not be a negative number or greater than the income. Expenses should not exceed income!');
         }
     }
     else {
-        alert('Income has to be a number or 0 or more than 0!');
+        alert('Income should be more than 0')
     }
 }
 
@@ -50,7 +51,6 @@ function calculateSavingAmountRemainingBalance() {
 
     //calculating saving amount
     const balance = calculateBalance();
-
     if (balance >= 0) {
         if (save >= 0 && save <= 100) {
             //calculting saving amount
