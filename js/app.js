@@ -62,7 +62,7 @@ function calculateSavingAmountRemainingBalance() {
             document.getElementById('remaining-balance').innerText = remainingBalance;
         }
         else {
-            alert('It is an invalid amount to save')
+            alert('You can not save more than 100% !')
         }
     }
     else {
