@@ -26,16 +26,11 @@ function calculateBalance() {
 
     if (income >= 0) {
         if ((food >= 0 && food <= income) && (rent >= 0 && rent <= income) && (clothes >= 0 && clothes <= income)) {
-            const totalExpenses = food + rent + clothes;
-            const balance = income - totalExpenses;
-            if (totalExpenses <= income) {
-                currentTotalExpenses.innerText = totalExpenses;
-                currentBalance.innerText = balance;
-                return balance;
-            }
-            else {
-                alert('Total expenses has exceeded your income!');
-            }
+            const totalExpenses = (food + rent + clothes).toFixed(2);
+            const balance = (income - totalExpenses).toFixed(2);
+            currentTotalExpenses.innerText = totalExpenses;
+            currentBalance.innerText = balance;
+            return balance;
 
         }
         else {
@@ -43,7 +38,7 @@ function calculateBalance() {
         }
     }
     else {
-        alert('Income has to be a number and 0 or more than 0!');
+        alert('Income has to be a number or 0 or more than 0!');
     }
 }
 
@@ -59,9 +54,9 @@ function calculateSavingAmountRemainingBalance() {
     if (balance >= 0) {
         if (save >= 0 && save <= 100) {
             //calculting saving amount
-            savingAmount = balance * (save / 100);
+            savingAmount = (balance * (save / 100)).toFixed(2);
             //calculating remaining balance
-            const remainingBalance = balance - savingAmount;
+            const remainingBalance = (balance - savingAmount).toFixed(2);
             //getting and value from total saving amount area and remaining text area
             document.getElementById('saving-amount').innerText = savingAmount;
             document.getElementById('remaining-balance').innerText = remainingBalance;
