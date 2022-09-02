@@ -7,3 +7,19 @@
 .fa-dollar-sign {
     color: #FBDF07;
 }
+
+.input-width {
+    width: 75%;
+}
+
+.calculate-button-width {
+    width: 50%;
+}
+
+.save-input-width {
+    width: 25%;
+}
+
+.save-button-width {
+    width: 25%;
+}

@@ -55,24 +55,24 @@ function calculateSavingAmountRemainingBalance() {
 
     //calculating saving amount
     const balance = calculateBalance();
-    if (save >= 0 && save <= 100) {
-        //calculting saving amount
-        savingAmount = balance * (save / 100);
-        //calculating remaining balance
-        const remainingBalance = balance - savingAmount;
-        //getting and value from total saving amount area and remaining text area
-        document.getElementById('saving-amount').innerText = savingAmount;
-        document.getElementById('remaining-balance').innerText = remainingBalance;
+
+    if (balance >= 0) {
+        if (save >= 0 && save <= 100) {
+            //calculting saving amount
+            savingAmount = balance * (save / 100);
+            //calculating remaining balance
+            const remainingBalance = balance - savingAmount;
+            //getting and value from total saving amount area and remaining text area
+            document.getElementById('saving-amount').innerText = savingAmount;
+            document.getElementById('remaining-balance').innerText = remainingBalance;
+        }
+        else {
+            alert('It is an invalid amount to save')
+        }
     }
     else {
-        alert('It is an invalid amount to save')
+        alert('Please enter valid input in all fields!');
     }
-
-
-
-
-
-
 
 
 

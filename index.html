@@ -28,15 +28,16 @@
     <main>
         <div class="container">
             <div class="row gap-5">
-                <div class="col-6">
+                <div class="col-12 col-md-6">
                     <img class=" w-100 h-100" src="images/money-matters.png" alt="">
                 </div>
-                <div class="col-5 bg-light p-5 text-center">
+                <div class="col-12 col-md-5 bg-light p-5 text-center">
                     <!-- income -->
                     <h5 class="fw-bold mb-4">Income</h5>
                     <label class="mb-4">
                         <span class="fw-semibold me-2">Income:</span>
-                        <input id="input-income" class="bg-secondary bg-opacity-25 fw-semibold border-0 rounded-1 p-2"
+                        <input id="input-income"
+                            class="input-width bg-secondary bg-opacity-25 fw-semibold border-0 rounded-1 p-2"
                             type="text">
                     </label>
 
@@ -48,14 +49,16 @@
                         <!-- food -->
                         <label class="mb-3">
                             <span class="fw-semibold me-2">Food:</span>
-                            <input id="input-food" class="bg-secondary bg-opacity-25 fw-semibold border-0 rounded-1 p-2"
+                            <input id="input-food"
+                                class="input-width bg-secondary bg-opacity-25 fw-semibold border-0 rounded-1 p-2"
                                 type="text">
                         </label>
 
                         <!-- rent -->
                         <label class="mb-3">
                             <span class="fw-semibold me-2">Rent:</span>
-                            <input id="input-rent" class="bg-secondary bg-opacity-25 fw-semibold border-0 rounded-1 p-2"
+                            <input id="input-rent"
+                                class="input-width bg-secondary bg-opacity-25 fw-semibold border-0 rounded-1 p-2"
                                 type="text">
                         </label>
 
@@ -63,7 +66,8 @@
                         <label>
                             <span class="fw-semibold me-2">Clothes:</span>
                             <input id="input-clothes"
-                                class="bg-secondary bg-opacity-25 fw-semibold border-0 rounded-1 p-2" type="text">
+                                class="input-width bg-secondary bg-opacity-25 fw-semibold border-0 rounded-1 p-2"
+                                type="text">
                         </label>
 
 
@@ -73,7 +77,7 @@
                     <div class="my-4">
                         <!-- calculate button -->
                         <button type="button" id="calculate"
-                            class="btn btn-success fw-semibold text-white px-5 py-2 mb-4">Calculate</button>
+                            class=" btn btn-success calculate-button-width fw-semibold text-white py-2 mb-4">Calculate</button>
                         <h5 class="fw-bold">Total expenses: <span id="total-expenses">0</span></h5>
                         <h5 class="fw-bold mt-3">Balance: <span id="balance">0</span></h5>
                     </div>
@@ -82,11 +86,12 @@
                     <div class="mb-4">
                         <label class="fw-semibold me-2" for="save">Save:</label>
                         <input id="input-save"
-                            class="w-25 bg-secondary fw-semibold bg-opacity-25 border-0 rounded-1 p-2" type="text">
+                            class="save-input-width bg-secondary fw-semibold bg-opacity-25 border-0 rounded-1 p-2"
+                            type="text">
                         <span class="fw-semibold mx-2">%</span>
                         <!-- save button -->
                         <button type="button" id="save"
-                            class="d-inline  btn btn-success fw-semibold text-white px-5 py-2">Save</button>
+                            class="save-button-width d-inline btn btn-success fw-semibold text-white px-2 py-2">Save</button>
 
                         <div class="mt-4">
                             <h5 class="fw-bold">Saving Amount: <span id="saving-amount">0</span></h5>
