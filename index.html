@@ -36,7 +36,8 @@
                     <h5 class="fw-bold mb-4">Income</h5>
                     <label class="mb-4">
                         <span class="fw-semibold me-2">Income:</span>
-                        <input class="bg-secondary bg-opacity-25 border-0 rounded-1 p-2" type="text">
+                        <input id="input-income" class="bg-secondary bg-opacity-25 fw-semibold border-0 rounded-1 p-2"
+                            type="text">
                     </label>
 
 
@@ -47,19 +48,22 @@
                         <!-- food -->
                         <label class="mb-3">
                             <span class="fw-semibold me-2">Food:</span>
-                            <input class="bg-secondary bg-opacity-25 border-0 rounded-1 p-2" type="text" name="" id="">
+                            <input id="input-food" class="bg-secondary bg-opacity-25 fw-semibold border-0 rounded-1 p-2"
+                                type="text">
                         </label>
 
                         <!-- rent -->
                         <label class="mb-3">
                             <span class="fw-semibold me-2">Rent:</span>
-                            <input class="bg-secondary bg-opacity-25 border-0 rounded-1 p-2" type="text" name="" id="">
+                            <input id="input-rent" class="bg-secondary bg-opacity-25 fw-semibold border-0 rounded-1 p-2"
+                                type="text">
                         </label>
 
                         <!-- clothes -->
                         <label>
                             <span class="fw-semibold me-2">Clothes:</span>
-                            <input class="bg-secondary bg-opacity-25 border-0 rounded-1 p-2" type="text" name="" id="">
+                            <input id="input-clothes"
+                                class="bg-secondary bg-opacity-25 fw-semibold border-0 rounded-1 p-2" type="text">
                         </label>
 
 
@@ -68,23 +72,25 @@
                     <!-- showing total expenses and balance -->
                     <div class="my-4">
                         <!-- calculate button -->
-                        <button type="button"
+                        <button type="button" id="calculate"
                             class="btn btn-success fw-semibold text-white px-5 py-2 mb-4">Calculate</button>
-                        <h5 class="fw-bold">Total expenses: <span>0</span></h5>
-                        <h5 class="fw-bold mt-3">Balance: <span>0</span></h5>
+                        <h5 class="fw-bold">Total expenses: <span id="total-expenses">0</span></h5>
+                        <h5 class="fw-bold mt-3">Balance: <span id="balance">0</span></h5>
                     </div>
 
                     <!-- saving, saving amount and remaining balance -->
                     <div class="mb-4">
                         <label class="fw-semibold me-2" for="save">Save:</label>
-                        <input class="w-25 bg-secondary bg-opacity-25 border-0 rounded-1 p-2" type="text" id="save">
+                        <input id="input-save"
+                            class="w-25 bg-secondary fw-semibold bg-opacity-25 border-0 rounded-1 p-2" type="text">
                         <span class="fw-semibold mx-2">%</span>
-                        <button type="button"
-                            class="d-inline w-50 btn btn-success fw-semibold text-white px-5 py-2">Calculate</button>
+                        <!-- save button -->
+                        <button type="button" id="save"
+                            class="d-inline  btn btn-success fw-semibold text-white px-5 py-2">Save</button>
 
                         <div class="mt-4">
-                            <h5 class="fw-bold">Saving Amount: <span>0</span></h5>
-                            <h5 class="fw-bold mt-3">Remaining Balance: <span>0</span></h5>
+                            <h5 class="fw-bold">Saving Amount: <span id="saving-amount">0</span></h5>
+                            <h5 class="fw-bold mt-3">Remaining Balance: <span id="remaining-balance">0</span></h5>
                         </div>
                     </div>
                 </div>
