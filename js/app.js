@@ -60,11 +60,18 @@ document.getElementById('calculate').addEventListener('click', function () {
 
 //save button handler
 document.getElementById('save').addEventListener('click', function () {
-    if (getInput('input-save') <= 100 && getInput('input-save') >= 0) {
-        document.getElementById('saving-amount').innerText = savingAmount();
-        document.getElementById('remaining-balance').innerText = remainingBalance();
+    if (balance() > 0) {
+        if (getInput('input-save') <= 100 && getInput('input-save') >= 0) {
+            document.getElementById('saving-amount').innerText = savingAmount();
+            document.getElementById('remaining-balance').innerText = remainingBalance();
+        }
+        else {
+            alert("You can't save more than more than 100% or less than 0% ");
+        }
     }
     else {
-        alert("You can't save more than more than 100% or less than 0% ");
+        alert("You have no amount to save!");
     }
+
+
 });
