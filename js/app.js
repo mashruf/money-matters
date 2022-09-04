@@ -50,7 +50,7 @@ document.getElementById('calculate').addEventListener('click', function () {
         }
 
         else {
-            alert("Negative amount or empty field or Invalid Input has been entered!");
+            alert("Negative amount or empty field or Invalid amount has been entered!");
         }
     }
     else {
